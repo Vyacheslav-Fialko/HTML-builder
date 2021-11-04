@@ -3,7 +3,7 @@ const fs = require('fs');
 const process = require('process');
 const filePath = path.resolve(__dirname, 'testFile.txt');
 
-const inpuText = (input) => {
+const inputText = (input) => {
   input.trim().slice(-4) == 'exit' ? readline.close() : fileWrite(input);
 };
 
@@ -29,7 +29,7 @@ const readline = require('readline').createInterface({
 
 readline.setPrompt(`write your text \n`);
 readline.prompt();
-readline.on('line', inpuText);
+readline.on('line', inputText);
 readline.on('close', goodBay);
 
 
